@@ -1,8 +1,12 @@
 const functions = require('firebase-functions');
+const express   = require('express');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+const createCandidate = require('./createCandidate');
+const handleError     = require('./handleError');
+
+const app = new Express();
+
+app.use(createCandidate);
+app.use(handleError);
+
+module.exports.createCandidate = functions.https.onRequest(app);

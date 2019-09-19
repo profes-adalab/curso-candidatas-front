@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+branches: 
+  only:
+    - master
+
+before_script:
+  - "npm run install:all"
+
+cache:
+  directories:
+  - functions/node_modules
+  - node_modules
+
+script:
+  - npm build
+  - npm test

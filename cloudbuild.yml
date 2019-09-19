@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'install:all' ]
+
+- name: 'gcr.io/cloud-builders/npm'
+  args: [ 'test' ]
+- name: 'gcr.io/cloud-builders/npm'
+  args: [ 'run', 'build' ]
+  env:
+  - 'REACT_APP_FIREBASE_PROJECT_ID=$PROJECT_ID'
+  - 'REACT_APP_FIREBASE_API_KEY=$PROJECT_ID'
+- name: 'gcr.io/[PROJECT_ID]/firebase'
+  args: [ 'deploy','--token', '$_FIREBASE_TOKEN']

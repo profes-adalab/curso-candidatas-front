@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.com/ajorquera/candidatas-front.svg?branch=master)](https://travis-ci.com/ajorquera/candidatas-front)
+
+
+----
+
 # Prueba de Responsable de Tecnología
 
 Esto es una prueba para los candidatos a responsable de tecnología de Adalab. La prueba se basa en una aplicación de gestión de candidatas a un curso de Adalab, que usa las tecnologías, herramientas y procesos que usamos actualmente. Partimos de una base de código ya existente (como luego será tu labor aquí) y el objetivo es desplegarlo y añadir algunas nuevas funcionalidades.

@@ -6,7 +6,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watch"
+    "test:react": "react-scripts test --env=jsdom --watchAll=false",
+    "test:functions": "cd functions && npm test",
+    "test": "npm run test:react && npm run test:functions",
+    "install:all": "npm --prefix ./ install ./functions"
   },
   "repository": {
     "type": "git",
@@ -17,29 +20,30 @@
   "bugs": {
     "url": "https://github.com/profes-adalab/candidatas-front/issues"
   },
-  "homepage": "https://candidatas-front.firebaseapp.com/",
+  "homepage": "https://adalab-test-cc3e5.firebaseapp.com/",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "babel-jest": "^23.6.0",
     "firebase": "^6.6.1",
     "node-sass": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-test-renderer": "^16.9.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
+    "husky": "^3.0.5",
     "jest": "^23.6.0",
     "jest-fetch-mock": "^2.0.1",
     "prettier": "^1.15.2"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",

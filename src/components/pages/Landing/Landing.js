@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../images/logo-adalab.png';
+import logo from '../../../images/logo-adalab.png';
 import PropTypes from 'prop-types';
 
 import './Landing.scss';
